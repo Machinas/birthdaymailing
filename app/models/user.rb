@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
 	def self.bday_update
 	    @users = User.all
 	    @users.each do |u|
-      UserMailer.bdat_mail(u.email).deliver
+	       unless u.accepts_email == false 
+	       	UserMailer.bdat_mail(u.name,u.email).deliver
+	       end
     end
   end
 end
