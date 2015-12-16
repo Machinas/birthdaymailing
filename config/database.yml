@@ -23,10 +23,13 @@ development:
   username: postgres
   password: scoala1989
   
+
+ # On Heroku and other platform providers, you may have a full connection URL
+ # available as an environment variable. For example:
+ #
+DATABASE_URL="postgres://rkvckjdgeflzut:UEZ7PTjBWd9unZK7l_oK4YYMSc@ec2-46-137-72-123.eu-west-1.compute.amazonaws.com:5432/dbfe89ed8ohp20"
+ #
+ # You can use this database configuration with:
+ #
 production:
-  adapter: postgresql
-  database: dbfe89ed8ohp20
-  pool: 5 
-  timeout: 5000  
-  username: rkvckjdgeflzut
-  password: UEZ7PTjBWd9unZK7l_oK4YYMSc
+  url: <%= ENV['DATABASE_URL'] %>  
