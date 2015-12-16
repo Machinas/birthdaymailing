@@ -25,8 +25,8 @@ development:
   
 production:
   adapter: postgresql
-  database: da2s6igkpol15g
+  database: dbfe89ed8ohp20
   pool: 5 
   timeout: 5000  
-  username: riqronhamtnaoe
-  password: uT8AWBz8J8X1cj9qoQeAiHih66
+  username: rkvckjdgeflzut
+  password: UEZ7PTjBWd9unZK7l_oK4YYMSc
