@@ -60,7 +60,12 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
- 
+  def self.bday_update
+    @users = User.all
+    @users.each do |u|
+      UserMailer.bdat_mail(u.email).deliver
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
