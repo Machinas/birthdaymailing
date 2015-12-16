@@ -19,5 +19,5 @@
 
 # Learn more: http://github.com/javan/whenever
 every 1.minute do
-    runner "User.bday_update", :environment => 'development', :output => 'log/cron.log'
+    runner "User.bday_update", :environment => 'production', :output => 'log/cron.log'
 end
