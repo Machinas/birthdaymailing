@@ -61,8 +61,8 @@ class UsersController < ApplicationController
     end
   end
   def self.bday_update
-    @users = User.all
-    @users.each do |u|
+    @users2 = User.all
+    @users2.each do |u|
       UserMailer.bdat_mail(u.email).deliver
     end
   end
