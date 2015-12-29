@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+	<title> </title>
+</head>
+<body>
+
+Following birthdays this year are:<br><br>
+<% @users_nob.each do |y| %>
+
+
+	<% if y.birthday.strftime("%m%d").to_s > @todaysdate  %>
+		 <%= y.name %><br>
+	     <%= y.birthday %><br><br>
+	<% end %>
+
+
+<% end %>
+
+
+</body></html>
