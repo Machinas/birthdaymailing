@@ -40,8 +40,8 @@ class User < ActiveRecord::Base
     end	
 
     if @nobirthday == true
-	    @allusersdates = @allusersdates.sort
-       	UserMailer.next_mail(@allusersnames.join(",").to_s,@allusersdates.join(",").to_s).deliver
+	    @allusersdates = @allusersdates.sort_by {|s| Date.parse s}
+       	UserMailer.next_mail(@allusersnames.join(",").to_s,@allusersdates.join(",").to_s.replace("2000-", "M/D: ");).deliver
       
 	end	
 
