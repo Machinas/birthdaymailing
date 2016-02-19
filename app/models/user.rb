@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
     end	
 
     if @nobirthday == true
-			
+	    @allusersdates = @allusersdates.sort
        	UserMailer.next_mail(@allusersnames.join(",").to_s,@allusersdates.join(",").to_s).deliver
       
 	end	
