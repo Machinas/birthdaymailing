@@ -10,7 +10,7 @@ Following birthdays this year are:<br><br>
 
 	<% if y.birthday.strftime("%m%d").to_s > @todaysdate  %>
 		 <%= y.name %><br>
-	     <%= y.birthday %><br><br>
+	     <%= y.birthday.to_s[5..-1] %><br><br>
 	<% end %>
 
 
